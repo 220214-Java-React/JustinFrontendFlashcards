@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+}
+
+#banner {
+  height: 150px;
+  background: #333333 url("./images/banner.png");
+  background-size: 100% 100%;
+}
+
+#navbar {
+  background-color: #333333;
+  overflow: hidden;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+#navbar a:hover {
+  background-color: #fff;
+  color: #333333;
+}
+
+#navbar a.active {
+  background-color: #f2a822;
+  font-weight: bold;
+  font-size: 20px;
+  color: #333333;
+}
+
+#content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.flashcard {
+  margin: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border: 2px #333333 solid;
+  color: #333;
+  text-align: center;
+  width: 40%;
+  height: 150px;
+}
+
+.flashcard:hover {
+  background-color: #f0f0f0;
+}
+
+.flashcard p {
+  line-height: 120px;
+}
