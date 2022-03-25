@@ -3,36 +3,22 @@
     Object Model - an object representation of that document
 */
 
-// TODO: replace me with a call to the backend ??????
-const flashcardData = [
-  {
-    question: "What is CSS?",
-    solution: "Cascading Style Sheet",
-  },
-  {
-    question: "What does TS stand for?",
-    solution: "TypeScript",
-  },
-  {
-    question: "What is the standard that JS and TS are built off of?",
-    solution: "EcmaScript",
-  },
-  {
-    question: "Is JavaScript Interpreted or Compiled?",
-    solution: "Interpreted",
-  },
-  {
-    question: "Are you ready to work on projects yet?",
-    solution: "YES!!!!",
-  },
-];
+const BASE_API_URL = "http://localhost:8080/api";
+
+function getFlashcards() {
+  fetch(`${BASE_API_URL}/flashcards`)
+    .then((response) => response.json())
+    .then((data) => createFlashcardElements(data));
+}
 
 const content = document.getElementById("content");
 
 // when the window is loaded it will call the createFlashcardElements callback function;
-window.onload = createFlashcardElements;
+window.onload = getFlashcards;
 
-function createFlashcardElements() {
+function createFlashcardElements(flashcardData) {
+  console.log(flashcardData);
+
   flashcardData.forEach((flashcard) => createFlashcard(flashcard));
 }
 
@@ -44,7 +30,7 @@ function createFlashcard(flashcard) {
   flashcardEle.setAttribute("onclick", "flip(this)");
 
   const question = document.createElement("p");
-  question.textContent = flashcard.question;
+  question.textContent = flashcard.title;
 
   const solution = document.createElement("p");
   solution.textContent = flashcard.solution;

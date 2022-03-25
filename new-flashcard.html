@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="newFlashcard.js" defer></script>
+</head>
+
+<body>
+    <div id="header">
+        <div id="banner"></div>
+        <div id="navbar">
+            <a href="index.html">Home</a>
+            <a href="flashcards.html">Flashcards</a>
+            <a href="new-flashcard.html" class="active">New Flashcard</a>
+        </div>
+    </div>
+
+
+    <div class="flashcardForm">
+        <h3>Create A New Flashcard</h3>
+        <input type="text" placeholder="title" id="title" /><br>
+        <input type="text" placeholder="solution" id="solution" /><br>
+        <span><label for="topic">Topic: </label>
+            <select name="topic" id="topic">
+                <option value="JAVA">Java</option>
+                <option value="SQL">SQL</option>
+                <option value="JAVASCRIPT">JavaScript</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+            </select></span><br>
+        <button onclick="submitFlashcard()">Submit</button>
+    </div>
+</body>
+
+</html>
