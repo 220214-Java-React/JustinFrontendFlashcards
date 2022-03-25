@@ -47,15 +47,49 @@ body {
   background-color: #fff;
   border: 2px #333333 solid;
   color: #333;
-  text-align: center;
   width: 40%;
   height: 150px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  flex-direction: column;
 }
 
 .flashcard:hover {
   background-color: #f0f0f0;
 }
 
-.flashcard p {
-  line-height: 120px;
+.flashcardForm {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 40%;
+
+  border: 2px #333333 solid;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.flashcardForm h3 {
+  color: #333;
+}
+
+.flashcardForm input,
+select,
+button {
+  margin: 5px 0px 5px 0px;
+}
+
+.flashcardForm button,
+span {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.flashcardForm select {
+  width: 65%;
 }
